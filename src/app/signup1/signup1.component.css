@@ -1,0 +1,16 @@
+.card{
+    background-color:rgb(235, 227, 227);
+    border-radius:6px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.2);
+    width:40%;
+    position :relative;
+    right:-225px; 
+}
+.text{
+    text-align: center;
+    color:white
+}
+.design{
+    position:relative;
+    right:-225px;
+}
