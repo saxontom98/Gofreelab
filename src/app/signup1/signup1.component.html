@@ -2,33 +2,40 @@
 <br>
 
 <div class="card">
-<form>
+<form [formGroup]="signupForm" (ngSubmit)="submit()">
     <h3 class="text">Sign up for Free</h3>
     <div class="form-group">
 <input type="text" id="id" formControlName="id" placeholder="Enter ID:">
+<div *ngIf="signupForm.get('id').invalid && signupForm.get('id').touched" class="text-danger">ID is mandatory</div>
 </div>
  
 <br>
 <div class="form-group">
     <input type="text" id="fname" formControlName="fname" placeholder="Enter First Name:">
+    <div *ngIf="signupForm.get('fname').invalid && signupForm.get('fname').touched" class="text-danger">First name is mandatory</div>
     </div>
     <br>
 
     <div class="form-group">
         <input type="text" id="lname" formControlName="lname" placeholder="Enter Last Name:">
+        <div *ngIf="signupForm.get('lname').invalid && signupForm.get('lname').touched" class="text-danger">Last name is mandatory</div>
+
         </div>
         <br>
 
         <div class="form-group">
             <input type="text" id="email" formControlName="email" placeholder="Enter E-mail:">
+            <div *ngIf="signupForm.get('email').invalid && signupForm.get('email').touched" class="text-danger">Email is mandatory</div>
             </div>
             <br>
             <div class="form-group">
                 <input type="text" id="password" formControlName="password" placeholder="Enter password:">
+                <div *ngIf="signupForm.get('password').invalid && signupForm.get('password').touched" class="text-danger">password is mandatory</div>
                 </div>
                 <br>
                 <div class="form-group">
                     <input type="text" id="password" formControlName="password" placeholder="Confirm Password :">
+                    <div *ngIf="signupForm.get('password').invalid && signupForm.get('password').touched" class="text-danger">Confirm password</div>
                     </div>
 <br>
                     <div class="form-group">

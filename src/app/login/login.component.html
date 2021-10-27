@@ -5,10 +5,20 @@
       <!-- Icon -->
      
       <!-- Login Form -->
-      <form>
-        <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+      <form [formGroup]="loginForm" (ngSubmit)="submit()">
+      <div class="form-group">
+        <input type="text" id="login" class="fadeIn second" name="login" placeholder="login id">
+        <div *ngIf="loginForm.get('login').invalid && loginForm.get('login').touched" class="text-danger">Login id is mandatory</div>
+
+      </div>
+      <div class="form-group">
+
         <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+        <div *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched" class="text-danger">password is mandatory</div>
         <input type="submit" class="fadeIn fourth" value="Log In">
+
+      </div>
+   
       </form>
   
       <!-- Remind Passowrd -->

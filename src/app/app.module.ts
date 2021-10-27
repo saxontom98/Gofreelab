@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {FormsModule} from '@angular/forms';
-import { Signup1Component } from './signup1/signup1.component';
+import { signup1Component } from './signup1/signup1.component';
 import { PasswordValidatorComponent } from './password-validator/password-validator.component';
 
 
@@ -18,7 +18,7 @@ import { PasswordValidatorComponent } from './password-validator/password-valida
     
     
     LoginComponent,
-    Signup1Component,
+    signup1Component,
     PasswordValidatorComponent,
     
   ],
